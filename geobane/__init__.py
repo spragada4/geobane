@@ -19,7 +19,7 @@ from . import degenerate
 from . import crs_mismatch
 from . import precision
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 
 __all__ = [
     "coordinate_order",
