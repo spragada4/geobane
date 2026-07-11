@@ -77,13 +77,23 @@ def absurd_overprecision():
     unintended floating-point accumulation upstream rather than genuine
     measurement precision. GPS itself is only accurate to a few meters.
     """
-    lat = round(random.uniform(-90, 90), 4) + random.random() * 1e-14
-    lng = round(random.uniform(-180, 180), 4) + random.random() * 1e-14
+    lat_base = round(random.uniform(-90, 90), 4)
+    lng_base = round(random.uniform(-180, 180), 4)
+
+    # Build extra precision as a string first - adding tiny floats directly
+    # can silently vanish due to float64's ~15-17 significant digit limit,
+    # which is itself exactly the kind of precision bug this library exists
+    # to simulate.
+    extra_lat = "".join(str(random.randint(0, 9)) for _ in range(12))
+    extra_lng = "".join(str(random.randint(0, 9)) for _ in range(12))
+
+    lat_str = f"{lat_base}{extra_lat}"
+    lng_str = f"{lng_base}{extra_lng}"
 
     return {
-        "lat": lat,
-        "lng": lng,
-        "decimal_places": len(str(lat).split(".")[-1]),
+        "lat": float(lat_str),
+        "lng": float(lng_str),
+        "decimal_places": len(lat_str.split(".")[-1]),
         "explanation": (
             "Coordinate precision here implies sub-nanometer accuracy, "
             "which is physically meaningless for GPS-derived data (typical "
@@ -93,7 +103,6 @@ def absurd_overprecision():
             "significantly at scale."
         ),
     }
-
 
 def integer_where_float_expected():
     """
