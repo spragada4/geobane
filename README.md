@@ -3,7 +3,7 @@
 **Adversarial test-data generator for geospatial systems.**
 
 Geobane generates the specific edge cases that silently break geospatial
-code — not just random coordinates, but the exact failure patterns that
+code, not just random coordinates, but the exact failure patterns that
 cause real bugs: coordinate order confusion, antimeridian crossings,
 degenerate geometry, CRS mismatches, and floating-point precision issues.
 
@@ -15,7 +15,7 @@ pip install geobane
 
 ## Why
 
-Most geospatial bugs don't crash — they silently produce wrong results.
+Most geospatial bugs don't crash, they silently produce wrong results.
 A swapped lat/lng pair still looks like a valid coordinate. A polygon
 crossing the date line still parses fine, right up until a bounding-box
 calculation treats it as spanning the entire globe. Geobane exists to
@@ -45,7 +45,7 @@ broken = precision.nan_infinity_injection()
 ```
 
 Every generator returns an `explanation` field describing the real-world
-bug it simulates — useful for understanding *why* the edge case matters,
+bug it simulates, useful for understanding *why* the edge case matters,
 not just reproducing it.
 
 ## Categories
@@ -63,7 +63,7 @@ including planned categories for future versions.
 
 ## Contributing
 
-Found a geospatial bug pattern that isn't covered? Open an issue or PR —
+Found a geospatial bug pattern that isn't covered? Open an issue or PR,
 the taxonomy doc is the place to propose new categories.
 
 ## License
