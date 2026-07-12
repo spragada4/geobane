@@ -58,7 +58,7 @@ not just reproducing it.
 | `crs_mismatch` | WGS84/Web Mercator confusion, missing CRS metadata |
 | `precision` | float32 boundaries, NaN/Infinity, over-precision |
 
-See [TAXONOMY.md](./TAXONOMY.md) for the full edge-case reference,
+See [TAXONOMY.md](https://github.com/spragada4/geobane/blob/main/TAXONOMY.md) for the full edge-case reference,
 including planned categories for future versions.
 
 ## Contributing
