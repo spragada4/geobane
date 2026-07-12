@@ -4,6 +4,7 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/geobane?cachebust=1)](https://pypi.org/project/geobane/)
 [![License](https://img.shields.io/pypi/l/geobane)](https://github.com/spragada4/geobane/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/pypi/dm/geobane)](https://pypi.org/project/geobane/)
+[![Tests](https://github.com/spragada4/geobane/actions/workflows/tests.yml/badge.svg)](https://github.com/spragada4/geobane/actions/workflows/tests.yml)
 
 See [CHANGELOG.md](https://github.com/spragada4/geobane/blob/main/CHANGELOG.md) for release history.
 
