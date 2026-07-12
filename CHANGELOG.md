@@ -5,6 +5,11 @@ All notable changes to this project are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.1.4] - 2026-07-12
+### Fixed
+- Added PyPI classifiers (Python versions, license, OS) so shields.io
+  badges render correctly instead of showing "missing".
+
 ## [0.1.3] - 2026-07-12
 ### Fixed
 - `TAXONOMY.md` link in README pointed to a broken relative path on PyPI;
