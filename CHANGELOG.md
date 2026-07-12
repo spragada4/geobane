@@ -5,6 +5,11 @@ All notable changes to this project are documented in this file.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+### Added
+- CI pipeline via GitHub Actions, running tests across Python 3.8-3.12
+  on every push and pull request.
+
 ## [0.1.4] - 2026-07-12
 ### Fixed
 - Added PyPI classifiers (Python versions, license, OS) so shields.io
